@@ -12,9 +12,10 @@ defmodule Toasty.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Toasty.PubSub},
       # Start the Endpoint (http/https)
-      ToastyWeb.Endpoint
+      ToastyWeb.Endpoint,
       # Start a worker by calling: Toasty.Worker.start_link(arg)
       # {Toasty.Worker, arg}
+      {Toasty.ToastServer, name: Toasty.ToastServer}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
